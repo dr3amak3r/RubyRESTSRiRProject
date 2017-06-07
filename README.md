@@ -1,10 +1,10 @@
 # RubyRESTSRiRProject
 
-w celu uruchomienia projektu nalerzy ustawic prawa dostepu
+w celu uruchomienia projektu nalezy ustawic prawa dostepu
 $sudo chmod 755 server.rb
 $sudo chmod 755 person4.rb
 
-dodatkowo nalerzy zainstalowac gemy
+dodatkowo nalezy zainstalowac gemy
 $sudo gem install Diffy
 $sudo gem install Sinatra
 $sudo gem install Thin
