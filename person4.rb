@@ -2,6 +2,10 @@
 #encoding: utf-8
 require 'diffy'
 
+#funkcja sprawdzajaca czy scierzka istnieje
+def directory_exists(directory)
+	Dir.mkdir(directory) unless File.exists?(directory)
+end
 #zapis do pliku html
 def save_to_html(dir, fileName, html_string_left, html_string_right, fileOne, fileTwo)
 	dir = "#{dir}/#{fileName}"
@@ -44,8 +48,9 @@ end
 
 #funkcja zapisujaca do pliku
 def save_to_file(dir, string, fileName)
+	#sprawdzanie czy istnieje folder do skladowania danych i tworzenie w przypadku gdy nie istnieje
+	directory_exists("#{dir}")
 	#sprawdzanie czy dana nazwa nie istnieje
-	
 	while 1 == if_file_exists(dir, fileName)
 		puts "#{fileName} - ten plik istnieje"
 		fileName = rename_random(fileName)
@@ -59,7 +64,6 @@ end
 
 #funkcja przegladajaca folder z plikami
 def folder_content(dir)
-	require 'diffy'
 	#zapisaie wszystkich plikow z folderu p do 
 	file_array = Dir.entries(dir)
 	puts "#{file_array.size} plików w folderze /#{dir}."
@@ -79,6 +83,8 @@ def folder_content(dir)
 	saveFile = 1
 #wyświetlanie ilosci plików z rozszerzeniem .rb
 	puts "#{rb_file_array.size} plików w folderze /#{dir}, z rozszerzeniem \".rb\"."
+	#sprawdzanie czy istnieje folder do skladowania danych i tworzenie w przypadku gdy nie istnieje
+	directory_exists("b")
 #porownanie elementow plików
 	for ext_element in rb_file_array do
 		for inner_element in rb_file_array do
@@ -116,7 +122,7 @@ print "Osoba 4 - Skladowanie i porownywanie kolejnych przeslanych programow na k
 #funkcja zapisujaca dane do pliku save_to_file('wzgledna/scierzka/do/pliku', 'tresc wiadomosci string', 'nazwa_pliku.rb')	
 #save_to_file('p', 'cos tam', 'nazwa_pliku.rb')
 #funkcja porównujaca zawartosc pliku
-folder_content("p")
+#folder_content("p")
 
 #puts Diffy::CSS_COLORBLIND_1
 #puts Diffy::CSS

@@ -1,37 +1,27 @@
 #!/usr/bin/env  ruby
 require 'rubygems'
 require 'sinatra/base'
+#wlasny plik
+load 'person4.rb'
 
 class MyApp < Sinatra::Base
 
-	get '/' do
-		'myapp2 Hello world!'
-	end
-	
-	get '/hello' do
-    
-		html = "<pre>"
-    env.each do |k,v|
-      html += k + " = " + v.to_s + "<br/>"
-    end
-    html + "</pre>"
-	end  
-  
-  post '/form' do
+  post '/' do
     
     @filename = params[:file][:filename]
     tmpfile = params[:file][:tempfile]
+    #zapis do pliku
+    save_to_file('p', tmpfile.read, "#{@filename}")
+    folder_content("p")
+    "Ściągnieto i składowana plik : #{@filename}!"
     
-    File.open("#{@filename}", 'wb') do |f|
-    f.write(tmpfile.read)
-	end
   end
   
-  get '/form' do
+  get '/' do
     %{
     <html>
       <body>
-        <form action="form" method="post" enctype="multipart/form-data">
+        <form action="" method="post" enctype="multipart/form-data">
           <input type="file" name="file"/>
           <input type="submit" />
         </form>
