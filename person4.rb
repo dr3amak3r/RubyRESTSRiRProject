@@ -1,18 +1,22 @@
 #!/usr/bin/env  ruby
-#encoding: utf-8
+#encoding: utf-8'
 require 'diffy'
 require 'zip'
 
 #funkcja pakujaca raporty do paczki
 def zip_it(path)
 
-path.sub!(%r[/$],'')
-archive = File.join(path,File.basename(path))+’.zip’
-FileUtils.rm archive, :force=>true
+	zipfile_name = path  # full path-to-zip-file
+	zipfile_name << '/raport.zip'
+	directory = zipfile_name.split('raport.zip')[0]
+	
+	if(File.file?(zipfile_name))
+		File.delete(zipfile_name)
+	end
 
-	Zip::ZipFile.open(archive, ‘w’) do |zipfile|
-		Dir['#{path}/**/**'].reject{|f|f==archive}.each do |file|
-		zipfile.add(file.sub(path+’/’,”),file)
+		Zip::File.open(zipfile_name, Zip::File::CREATE) do |zipfile|
+		Dir[File.join(directory, '*.html')].each do |file|
+		zipfile.add(file.sub(directory, ''), file)
 		end
 	end
 end    

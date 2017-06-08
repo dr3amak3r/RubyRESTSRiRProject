@@ -51,9 +51,10 @@ class MyApp < Sinatra::Base
 	#{Dir.entries('./b').map { |e| "<br>#{e.split("\"")[0]}" }}
   end
   get '/downloadraports' do
-	file = "#{File.dirname(__FILE__)}/b"
-	puts file
-	zip_it(file)
+	file = "#{File.expand_path(__FILE__)}"
+	path = file.split("server.rb")[0]
+	path << 'b'
+	zip_it(path)
   end
   
 end
