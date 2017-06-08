@@ -1,6 +1,21 @@
 #!/usr/bin/env  ruby
 #encoding: utf-8
 require 'diffy'
+require 'zip'
+
+#funkcja pakujaca raporty do paczki
+def zip_it(path)
+
+path.sub!(%r[/$],'')
+archive = File.join(path,File.basename(path))+’.zip’
+FileUtils.rm archive, :force=>true
+
+	Zip::ZipFile.open(archive, ‘w’) do |zipfile|
+		Dir['#{path}/**/**'].reject{|f|f==archive}.each do |file|
+		zipfile.add(file.sub(path+’/’,”),file)
+		end
+	end
+end    
 
 #funkcja sprawdzajaca czy scierzka istnieje
 def directory_exists(directory)
@@ -115,19 +130,6 @@ def folder_content(dir)
 		end
 	end
 end
-
 print "Osoba 4 - Skladowanie i porownywanie kolejnych przeslanych programow na komputer K2 pod wzgledem podobienstwa budowy programu oraz przeslanie zwrotnego raportu\n"
-
-
-#funkcja zapisujaca dane do pliku save_to_file('wzgledna/scierzka/do/pliku', 'tresc wiadomosci string', 'nazwa_pliku.rb')	
-#save_to_file('p', 'cos tam', 'nazwa_pliku.rb')
-#funkcja porównujaca zawartosc pliku
-#folder_content("p")
-
-#puts Diffy::CSS_COLORBLIND_1
-#puts Diffy::CSS
-
-#implementacja zapisu pliku
-#zapis do stringa
 
 

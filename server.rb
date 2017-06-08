@@ -13,8 +13,10 @@ class MyApp < Sinatra::Base
     #zapis do pliku
     save_to_file('p', tmpfile.read, "#{@filename}")
     folder_content("p")
-    "Ściągnieto i składowana plik : #{@filename}!"
-    
+    "Ściągnieto plik : #{@filename}
+    <br> <a href='/'>Upload next file</a> 
+	<br> <a href='/uploadedfiles'>Show uploaded files</a>
+	<br> <a href='/raports'> Show Raports</a>"
   end
   
   get '/' do
@@ -23,12 +25,36 @@ class MyApp < Sinatra::Base
       <body>
         <form action="" method="post" enctype="multipart/form-data">
           <input type="file" name="file"/>
-          <input type="submit" />
+          <input type="submit" value="Upload File" />
         </form>
+			<br> <a href='/uploadedfiles'>Show uploaded files</a>
+			<br> <a href='/raports'> Show Raports</a>
+			<br> <a href='/downloadraports'>Download Raports</a>
       </body>
     </html>
     }
   end
   
+  get '/uploadedfiles' do
+  
+  files = Dir['p/*.rb']
+	%{  <a href='/'> Powrót <a/> 
+		#{files.map{ |f| "<br>#{f.split('/')[1]}"}}
+	}
+  end
+  
+  get '/raports' do
+  files = Dir['b/*.html']
+	%{  <a href='/'> Powrót <a/> 
+		#{files.map{ |f| "<br>#{f.split('/')[1]}"}}
+	}
+	#{Dir.entries('./b').map { |e| "<br>#{e.split("\"")[0]}" }}
+  end
+  get '/downloadraports' do
+	file = "#{File.dirname(__FILE__)}/b"
+	puts file
+	zip_it(file)
+  end
+  
 end
-MyApp.run! :host => 'localhost', :port => 8082, :server => 'thin'
+MyApp.run! :bind => 'localhost', :port => 8082, :server => 'thin'
