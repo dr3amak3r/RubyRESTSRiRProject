@@ -24,12 +24,12 @@ class MyApp < Sinatra::Base
     <html>
       <body>
         <form action="" method="post" enctype="multipart/form-data">
-          <input type="file" name="file"/>
+          <input type="file" name="file" accept=".rb"/>
           <input type="submit" value="Upload File" />
         </form>
 			<br> <a href='/uploadedfiles'>Show uploaded files</a>
 			<br> <a href='/raports'> Show Raports</a>
-			<br> <a href='/downloadraports'>Download Raports</a>
+			<br> <a href='/downloadraports'>Download Zipped Raports</a>
       </body>
     </html>
     }
@@ -50,11 +50,12 @@ class MyApp < Sinatra::Base
 	}
 	#{Dir.entries('./b').map { |e| "<br>#{e.split("\"")[0]}" }}
   end
+  
   get '/downloadraports' do
 	file = "#{File.expand_path(__FILE__)}"
 	path = file.split("server.rb")[0]
 	path << 'b'
-	zip_it(path)
+	send_file zip_it(path)
   end
   
 end

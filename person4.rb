@@ -19,6 +19,8 @@ def zip_it(path)
 		zipfile.add(file.sub(directory, ''), file)
 		end
 	end
+	
+	return zipfile_name
 end    
 
 #funkcja sprawdzajaca czy scierzka istnieje
