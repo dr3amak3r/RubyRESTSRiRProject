@@ -16,4 +16,7 @@ $sudo gem install Thin
 #funkcja porównujaca zawartosc pliku znajdujacych sie w folderze folder_content('wzgledna/scierdzka/do/folderu') wyniki proownania zpisane do folderu b w fotmacie html
 #folder_content('p')
 
+realizacja wysyłania pliku pojedynczego do postawionego serwera
+curl --form "file=@nazwa_pliku_do_przeslania_rb" http://localhost:8082/
+
 
