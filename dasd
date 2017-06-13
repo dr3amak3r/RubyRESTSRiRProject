@@ -1,0 +1,94 @@
+[33mcommit 416743d9eada54865ac04105014e964890456228[m
+Author: marcin.flis <marcin777@gmail.com>
+Date:   Tue Jun 13 11:03:56 2017 +0200
+
+    clean tmp files
+
+[33mcommit db436f76c50342de06e8d1209a52c9128b14f1cf[m
+Author: marcin.flis <marcin777@gmail.com>
+Date:   Tue Jun 13 10:51:37 2017 +0200
+
+    marcin1
+
+[33mcommit 3d5b88beca8a0a3ea2c9722192894a0a273a9732[m
+Author: agnieszka.zielinska <agnieszka.zielinska199494@gmail.com>
+Date:   Tue Jun 13 10:09:55 2017 +0200
+
+    commit2
+
+[33mcommit d8dfec58bbb057a4bf5bb524a00d6a1abab62793[m
+Author: achuch <agatachucherko@gmail.com>
+Date:   Fri Jun 9 22:04:03 2017 +0200
+
+    Poprawiona ścieżka do folderu z plikami
+
+[33mcommit c96e422a690d3f7dc38932ce771edad5f0509728[m
+Author: achuch <agatachucherko@gmail.com>
+Date:   Fri Jun 9 21:14:58 2017 +0200
+
+    Add files via upload
+    
+    Serwer dla komputera 1, dodano pierwszą wersje przesyłania pliku pomiędzy K1 -> K2 (Osoba nr 1)
+
+[33mcommit 0399379248c6446d1fed3016e516f223ce24d737[m
+Author: dr3amak3r <dr3amak3r2014@gmail.com>
+Date:   Fri Jun 9 13:31:57 2017 +0200
+
+    Add files via upload
+    
+    Zrealizowane funkcjonalności sciągania spakowanego pliku z raportami, możliwość ściągniecia za pomoca polecenia
+    wget curl http://localhost:8082/downloadraports
+
+[33mcommit 49863d132c47796b7a18852b75a30d6efeb31e19[m
+Author: dr3amak3r <dr3amak3r2014@gmail.com>
+Date:   Fri Jun 9 13:27:43 2017 +0200
+
+    Create README.md
+    
+    Dodatkowe informacje o przesyłaniu pliku za pomoca cURL
+
+[33mcommit f8bccf1be15cc20bb4e3552d03f1ec42fe22d9fc[m
+Author: dr3amak3r <dr3amak3r2014@gmail.com>
+Date:   Thu Jun 8 13:05:34 2017 +0200
+
+    Add files via upload
+    
+    Dodano funkcjonalnosc sprawdzania czy spakowany plik istnieje, jezeli nie to pakuje wszystkie pliki z rozszerzeniem .html w przeciwnym wypadku usuwa .zip i pakuje wszystkie .html.
+
+[33mcommit 96419480f80d04ea317c122280748adea6d98f8e[m
+Author: dr3amak3r <dr3amak3r2014@gmail.com>
+Date:   Thu Jun 8 11:08:33 2017 +0200
+
+    Add files via upload
+    
+    Dodano funkcje, które pozwalaja pakowac pliki raportów do formatu zip.
+
+[33mcommit 662f5970e7c40c635f3f9626af521c3118e439fc[m
+Author: dr3amak3r <dr3amak3r2014@gmail.com>
+Date:   Wed Jun 7 12:40:38 2017 +0200
+
+    Update README.md
+
+[33mcommit 56555028c6efcd615784d4dec0d3047c37cd4bd6[m
+Author: dr3amak3r <dr3amak3r2014@gmail.com>
+Date:   Wed Jun 7 10:43:33 2017 +0200
+
+    Update README.md
+
+[33mcommit 8acd511be6bef2cf6b45ec87f2624b92c5f852d0[m
+Author: dr3amak3r <dr3amak3r2014@gmail.com>
+Date:   Wed Jun 7 10:36:38 2017 +0200
+
+    Add files via upload
+
+[33mcommit d286b0c27a44fefb0fb204fafb9dc2fd9663988d[m
+Author: dr3amak3r <dr3amak3r2014@gmail.com>
+Date:   Wed Jun 7 09:43:38 2017 +0200
+
+    Add files via upload
+
+[33mcommit ae7c01065984fb493cbf24e1a11cab55109c31a5[m
+Author: dr3amak3r <dr3amak3r>
+Date:   Wed Jun 7 09:41:41 2017 +0200
+
+    first commit
