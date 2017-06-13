@@ -44,14 +44,14 @@ s
 E
 5
 UTF-8
-13
-Hello, world!
+11
+Hello world
 x
 E
 8
 US-ASCII
-7
-putsdas
+4
+puts
 p
 3
 I
@@ -64,7 +64,7 @@ x
 E
 8
 US-ASCII
-12
-./p/main2.rb
+19
+./p/hello_world4.rb
 p
 0

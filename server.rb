@@ -60,4 +60,4 @@ class MyApp < Sinatra::Base
   end
   
 end
-MyApp.run! :bind => 'localhost', :port => 8082, :server => 'thin'
+MyApp.run! :bind => 'localhost', :port => 8080, :server => 'thin'
