@@ -1,0 +1,1 @@
+bash: ./lib/rubinius/3.79/bin/rbx: No such file or directory

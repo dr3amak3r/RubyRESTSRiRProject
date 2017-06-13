@@ -1,0 +1,9 @@
+language: ruby
+env:
+  - RUBYLIB=lib:.
+script: mspec spec
+rvm:
+  - ruby-head
+  - 2.2.0
+  - 2.1.5
+  - rbx-2

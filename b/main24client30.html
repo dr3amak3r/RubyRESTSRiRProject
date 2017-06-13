@@ -1,0 +1,59 @@
+<link rel="stylesheet" href="style.css"><h1> Raport main24client30.html  </h1><div class="diff"><ul><li class="unchanged"><span>Nie zmieniona linia</span></li><li class="del"><del><strong>Usinieta linia</strong></del></li><li class="ins"><ins><strong>Dodana Linia</strong></ins></li></ul></div><br><table style="width:100%"> <tr><th>main24.rb</th><th>client30.rb</th></tr><tr><td><div class="diff">
+  <ul>
+    <li class="del"><del></del></li>
+    <li class="del"><del>def send_file_to_server(line)</del></li>
+    <li class="del"><del>  puts line</del></li>
+    <li class="del"><del>end</del></li>
+    <li class="del"><del></del></li>
+    <li class="del"><del>loop do</del></li>
+    <li class="del"><del>   </del></li>
+    <li class="del"><del>  </del></li>
+    <li class="del"><del>  files = Dir[&quot;./client/input/*.txt&quot;]</del></li>
+    <li class="del"><del></del></li>
+    <li class="del"><del>  files.each do |file_name| </del></li>
+    <li class="del"><del>    if !File.directory? file_name </del></li>
+    <li class="del"><del>      File.open(file_name) do |file|</del></li>
+    <li class="del"><del>        file.each_line do |line|</del></li>
+    <li class="del"><del>            send_file_to_server(line)</del></li>
+    <li class="del"><del>        end</del></li>
+    <li class="del"><del>      end</del></li>
+    <li class="del"><del>      File.delete(file_name)</del></li>
+    <li class="del"><del>      sleep(0.5)</del></li>
+    <li class="del"><del>    end</del></li>
+    <li class="del"><del>  end</del></li>
+    <li class="del"><del>  sleep(0.5)</del></li>
+    <li class="del"><del>end</del></li>
+
+    <li class="ins"><ins>putsdas Hello, world!&#39;</ins></li>
+  </ul>
+</div>
+</td><td><div class="diff">
+  <ul>
+    <li class="del"><del>putsdas Hello, world!&#39;</del></li>
+    <li class="ins"><ins></ins></li>
+    <li class="ins"><ins>def send_file_to_server(line)</ins></li>
+    <li class="ins"><ins>  puts line</ins></li>
+    <li class="ins"><ins>end</ins></li>
+    <li class="ins"><ins></ins></li>
+    <li class="ins"><ins>loop do</ins></li>
+    <li class="ins"><ins>   </ins></li>
+    <li class="ins"><ins>  </ins></li>
+    <li class="ins"><ins>  files = Dir[&quot;./client/input/*.txt&quot;]</ins></li>
+    <li class="ins"><ins></ins></li>
+    <li class="ins"><ins>  files.each do |file_name| </ins></li>
+    <li class="ins"><ins>    if !File.directory? file_name </ins></li>
+    <li class="ins"><ins>      File.open(file_name) do |file|</ins></li>
+    <li class="ins"><ins>        file.each_line do |line|</ins></li>
+    <li class="ins"><ins>            send_file_to_server(line)</ins></li>
+    <li class="ins"><ins>        end</ins></li>
+    <li class="ins"><ins>      end</ins></li>
+    <li class="ins"><ins>      File.delete(file_name)</ins></li>
+    <li class="ins"><ins>      sleep(0.5)</ins></li>
+    <li class="ins"><ins>    end</ins></li>
+    <li class="ins"><ins>  end</ins></li>
+    <li class="ins"><ins>  sleep(0.5)</ins></li>
+    <li class="ins"><ins>end</ins></li>
+
+  </ul>
+</div>
+</td></tr></table>

@@ -9,6 +9,8 @@ $sudo gem install Diffy
 $sudo gem install Sinatra
 $sudo gem install Thin
 
+$sudo gem install rake
+$sudo gem install rubocop
 
 #funkcja zapisujaca dane do pliku save_to_file('wzgledna/scierzka/do/folderu', 'tresc wiadomosci string', 'nazwa_pliku.rb')	
 #save_to_file('p', 'cos tam', 'nazwa_pliku.rb')

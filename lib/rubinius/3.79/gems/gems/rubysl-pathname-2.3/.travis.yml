@@ -1,0 +1,27 @@
+---
+language: ruby
+before_install:
+  - gem install bundler
+env:
+  - RUBYLIB=lib
+  - RUBYLIB=
+script: mspec spec
+rvm:
+  - 2.2
+  - rbx
+matrix:
+  exclude:
+    - rvm: 2.2
+      env: RUBYLIB=lib
+    - rvm: rbx
+      env: RUBYLIB=
+    - rvm: 2.2
+      os: osx
+os:
+  - linux
+  - osx
+sudo: false
+notifications:
+  email:
+    on_success: change
+    on_failure: change

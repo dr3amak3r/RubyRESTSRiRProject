@@ -11,9 +11,10 @@ class MyApp < Sinatra::Base
     @filename = params[:file][:filename]
     tmpfile = params[:file][:tempfile]
     #zapis do pliku
-    save_to_file('p', tmpfile.read, "#{@filename}")
+    @result = save_to_file('p', tmpfile.read, "#{@filename}")
     folder_content("p")
-    "Ściągnieto plik : #{@filename}
+    "Ściągnieto plik : #{@filename}"
+    "Uruchomienie programu: #{@result}
     <br> <a href='/'>Upload next file</a> 
 	<br> <a href='/uploadedfiles'>Show uploaded files</a>
 	<br> <a href='/raports'> Show Raports</a>"

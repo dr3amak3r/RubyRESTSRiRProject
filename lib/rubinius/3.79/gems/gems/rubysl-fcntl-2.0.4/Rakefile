@@ -1,0 +1,9 @@
+require "rubygems"
+require "bundler/gem_tasks"
+
+desc "Generate fcntl.rb"
+task :default do
+  Dir.chdir File.expand_path("../lib/rubysl/fcntl", __FILE__) do
+    exec Gem.ruby, "extconf.rb"
+  end
+end

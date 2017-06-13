@@ -1,0 +1,4 @@
+source 'https://rubygems.org'
+
+# Specify your gem's dependencies in rubysl-e2mmap.gemspec
+gemspec

@@ -1,0 +1,6 @@
+language: ruby
+env:
+  - RUBYLIB=lib
+script: bundle exec mspec spec
+rvm:
+  - rbx-nightly-19mode
