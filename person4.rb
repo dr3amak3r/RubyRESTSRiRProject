@@ -1,7 +1,9 @@
 #!/usr/bin/env  ruby
-#encoding: utf-8'
 require 'diffy'
 require 'zip'
+
+load 'person2.rb'
+load 'person3.rb'
 
 # @author Kamil Różański
 class Person4
@@ -98,17 +100,26 @@ end
 # @param fileName [String] nazwa pliku pod jaką zapisywany jest plik z rozszerzeniem .rb
 def save_to_file(dir, string, fileName)
 	#sprawdzanie czy istnieje folder do skladowania danych i tworzenie w przypadku gdy nie istnieje
-	directory_exists("#{dir}")
-	#sprawdzanie czy dana nazwa nie istnieje
-	while 1 == if_file_exists(dir, fileName)
-		puts "#{fileName} - ten plik istnieje"
-		fileName = rename_random(fileName)
-		puts "#{fileName} - wygenerowano nową nazwę pliku"
-	end
-		dir = "#{dir}/#{fileName}"
-		file = File.open(dir, 'w')
-		file.write(string)
-		file.close
+  directory_exists("#{dir}")
+  #sprawdzanie czy dana nazwa nie istnieje
+  while 1 == if_file_exists(dir, fileName)
+    puts "#{fileName} - ten plik istnieje"
+    fileName = rename_random(fileName)
+    puts "#{fileName} - wygenerowano nową nazwę pliku"
+  end
+    dir = "#{dir}/#{fileName}"
+    file = File.open(dir, 'w')
+    file.write(string)
+    file.close
+    
+    #Agnieszka 
+    result = check_and_compile_file(dir,fileName);
+    if(result)
+        return run_and_get_result(dir,fileName);
+    else
+        return get_compile_error(dir,fileName);
+    end
+    #/Agnieszka
 end
 
 # Przegladanie i porównywanie plików z rozszerzeniem .rb oraz generowanie raportów

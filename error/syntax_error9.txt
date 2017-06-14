@@ -1,0 +1,4 @@
+./p/syntax_error9.rb:1: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+puts *Hello world"
+                 ^
+./p/syntax_error9.rb:1: unterminated string meets end of file

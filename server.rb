@@ -3,9 +3,9 @@ require 'rubygems'
 require 'sinatra/base'
 load 'person4.rb'
 
-  $ip = ''
-  $port = ''
-  $servType = ''
+  $ip = 'localhost'
+  $port = '9876'
+  $servType = 'thin'
   
   # Wczytywanie opcji stałej konfiguracji
   #
@@ -42,9 +42,10 @@ class MyApp < Sinatra::Base
     @filename = params[:file][:filename]
     tmpfile = params[:file][:tempfile]
     #zapis do pliku
-    server.save_to_file('p', tmpfile.read, "#{@filename}")
+    @result = server.save_to_file('p', tmpfile.read, "#{@filename}")
     server.folder_content("p")
-    "Ściągnieto plik : #{@filename}
+    "Ściągnieto plik : #{@filename}"
+    "Uruchomienie programu: #{@result}
     <br> <a href='/'>Upload next file</a> 
 	<br> <a href='/uploadedfiles'>Show uploaded files</a>
 	<br> <a href='/raports'> Show Raports</a>"
