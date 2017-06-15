@@ -1,4 +1,10 @@
-class Protection
+#!/usr/bin/env  ruby
+
+# @author Michał
+#Funkcja sprawdza poziom bezpieczeństwa kodu
+#Jeżeli w kodzie występują potencjalnie niebezpieczne metody zwróci 'false'
+#
+# @param dir[String] - sciezka do pliku
 
 def safetyCheck(dir)
 
@@ -24,4 +30,3 @@ def safetyCheck(dir)
 end
 
 
-end
