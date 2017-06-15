@@ -1,0 +1,71 @@
+Instalacja Ruby pod linuxem dyst. Ubuntu 14.04
+
+$sudo apt-get install ruby
+
+Instalacja odpowiednich gemów (zależności niezbędnych do uruchomienia), komenda
+
+$sudo gem install nazwa_gema
+
+*** LOCAL GEMS ***
+
+bigdecimal (1.2.6)
+daemons (1.2.4)
+diffy (3.2.0)
+eventmachine (1.2.3)
+io-console (0.4.3)
+json (1.8.1)
+mustermann (1.0.0)
+power_assert (1.0.2)
+psych (2.0.8)
+rack (2.0.3)
+rack-protection (2.0.0)
+rack-test (0.6.3)
+rake (10.4.2)
+rdoc (4.2.0)
+rubyzip (1.2.1)
+sinatra (2.0.0)
+test-unit (3.2.4)
+thin (1.7.0)
+tilt (2.0.7)
+yard (0.9.9)
+
+Bibliografia:
+
+Ogolne informacje na temat jezyka Ruby http://www.apohllo.pl/dydaktyka/ruby/intro/struktury-jezyka, dostęp 2.06.2017
+Narzedzie do porównania - https://github.com/samg/diffy, dostęp 2.06.2017
+Opis zależności w diffy - https://rubygems.org/gems/diffy, dostęp 2.06.2017
+
+Porównanie dwóch plikow, przykład - https://gist.github.com/rymawby/1647904,dostęp 2.06.2017
+Obsuga systemu plików, dokumentacja Ruby - http://ruby-doc.org/core-2.4.1/Dir.html#method-c-home, dostęp 3.06.2017
+					   https://stackoverflow.com/questions/1755665/get-names-of-all-files-from-a-folder-with-ruby, dostęp 2.06.2017
+						
+Operacje na plikach - http://ruby-on-rails-tutorial.x25.pl/chapter/show.operacje_na_plikach, dostęp 2.06.2017
+
+						
+Sinatra https://www.sitepoint.com/uno-use-sinatra-implement-rest-api/, dostęp 4.06.2017
+		https://www.slideshare.net/launchany/using-sinatra-to-build-rest-apis-in-ruby, dostęp 4.06.2017
+		https://www.slideshare.net/oisin/simple-rest-services-with-sinatra, dostęp 5.06.2017
+		http://www.wooptoot.com/file-upload-with-sinatra, dostęp 6.06.2017
+		https://gist.github.com/pfeilbr/337450, dostęp 6.06.2017
+		
+Pakowanieplików - http://www.rubydoc.info/gems/rubyzip/1.1.6, dostęp 6.06.2017
+		  https://ruby-doc.org/core-2.2.0/String.html#method-i-sub-21, dostęp 7.06.2017
+			
+Testy jednostkowe
+	https://learnrubythehardway.org/book/ex51.html, dostęp 12.06.2017
+	http://www.alexedwards.net/blog/how-to-make-a-rubygem-part-two, dostęp 12.06.2017
+	
+Dokumentacja
+	https://www.ruby-toolbox.com/categories/documentation_tools, dostęp 10.06.2017
+	
+Stała konfiguracja
+	http://rubyforadmins.com/config-files, dostęp 12.06.2017
+	
+Prównanie serwerów ruby
+	https://www.ruby-toolbox.com/categories/web_servers, dostęp 7.06.2017
+	
+Diagramy UML
+	https://www.draw.io/#G0B5sUqzNCQGcMM3pPMUNJOFBzRUU, dostęp 4.06.2017
+	diagram sekwencji tworzony w Umbrello bram możliwości tworzenia DFD, dostęp 4.06.2017
+		
+		
