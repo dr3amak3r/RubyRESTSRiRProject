@@ -6,6 +6,7 @@ require "test/unit"
  
  
 # @author Marcin
+#
 # test funkcji do uruchamiania kodu
 # 
 class TestRunAndGetResultFunction < Test::Unit::TestCase
