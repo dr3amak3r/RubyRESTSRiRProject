@@ -1,15 +1,16 @@
 #!/usr/bin/env  ruby
 
-# @author Agnieszka
-# @param dir - sciezka do pliku
-# @param filename - nazwa pliku
-# @return boolean - true wszystko ok i kompilacja zakonczona/false wystapil blad
-#
+# author Agnieszka
+
 # sprawdza poprawnosc skladni przeslanego pliku. Jesli wystapil blad to zwraca false
 # i zostaje on zapisany w katalogu ./error/{filename}.txt, w przeciwnym razie program 
 # probuje skompilowac plik za pomoca rubinius. Jesli kompilacja sie powiedzie
 # w katalogu ./output/{filenam}.rbc zostanie zapisany skompilowany plik 
-#
+# 
+# @param dir[String] - sciezka do pliku
+# @param filename[String] - nazwa pliku
+# @return [boolean]- true wszystko ok i kompilacja zakonczona/false wystapil blad
+
 def check_and_compile_file(dir,fileName)
   
   puts "#{dir} - kompilacja pliku..."
@@ -34,13 +35,15 @@ def check_and_compile_file(dir,fileName)
 end
 
 # @author Agnieszka
-# @param dir - sciezka do pliku
-# @param filename - nazwa pliku
-# @return result - blad(string)
 #
 # funkcja zwraca ostatni blad dla przeslanego pliku
 # moze byc to blad kompilacji lub sprawdzania skladni
 #
+# @param dir[String] - sciezka do pliku
+# @param filename[String] - nazwa pliku
+# @return result - blad[String]
+
+
 def get_compile_error(dir,fileName)
   outname = fileName.split(".")[0];
   errorFile ="./error/#{outname}.txt"

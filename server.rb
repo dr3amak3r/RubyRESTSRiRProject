@@ -3,7 +3,7 @@ require 'rubygems'
 require 'sinatra/base'
 load 'person4.rb'
 
-  $ip = 'localhost'
+  $ip = '192.168.242.25'
   $port = '9876'
   $servType = 'thin'
   
