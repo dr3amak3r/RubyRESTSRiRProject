@@ -1,4 +1,5 @@
 #!/usr/bin/env  ruby
+#encoding: utf-8'
 require 'diffy'
 require 'zip'
 
@@ -98,20 +99,21 @@ end
 # @param dir [String] nazwa folderu do zapisu
 # @param string [String] tekst zapisywany do pliku
 # @param fileName [String] nazwa pliku pod jaką zapisywany jest plik z rozszerzeniem .rb
+# #return [String] zwraca tekst zapisany do pliku
 def save_to_file(dir, string, fileName)
 	#sprawdzanie czy istnieje folder do skladowania danych i tworzenie w przypadku gdy nie istnieje
-  directory_exists("#{dir}")
-  #sprawdzanie czy dana nazwa nie istnieje
-  while 1 == if_file_exists(dir, fileName)
-    puts "#{fileName} - ten plik istnieje"
-    fileName = rename_random(fileName)
-    puts "#{fileName} - wygenerowano nową nazwę pliku"
-  end
-    dir = "#{dir}/#{fileName}"
-    file = File.open(dir, 'w')
-    file.write(string)
-    file.close
-    
+	directory_exists("#{dir}")
+	#sprawdzanie czy dana nazwa nie istnieje
+	while 1 == if_file_exists(dir, fileName)
+		puts "#{fileName} - ten plik istnieje"
+		fileName = rename_random(fileName)
+		puts "#{fileName} - wygenerowano nową nazwę pliku"
+	end
+		dir = "#{dir}/#{fileName}"
+		file = File.open(dir, 'w')
+		file.write(string)
+		file.close
+		    
     #Agnieszka 
     result = check_and_compile_file(dir,fileName);
     if(result)
@@ -120,13 +122,14 @@ def save_to_file(dir, string, fileName)
         return get_compile_error(dir,fileName);
     end
     #/Agnieszka
+	return string	
 end
 
 # Przegladanie i porównywanie plików z rozszerzeniem .rb oraz generowanie raportów
 # @param dir [String] nazwa folderu który będzie przeglądany
 # @return [Array] zwraca tablice pliów itniejących w folderze zapisu
 def folder_content(dir)
-	#zapisaie wszystkich plikow z folderu p do 
+	#zapisanie wszystkich plikow z folderu p do 
 	file_array = Dir.entries(dir)
 	puts "#{file_array.size} plików w folderze /#{dir}."
 	rb_file_array = []
@@ -176,6 +179,7 @@ def folder_content(dir)
 			end
 		end
 	end
+	return rb_file_array
 end
 print "Osoba 4 - Skladowanie i porownywanie kolejnych przeslanych programow na komputer K2 pod wzgledem podobienstwa budowy programu oraz przeslanie zwrotnego raportu\n"
 end
