@@ -12,7 +12,7 @@ class TestSystemu < Test::Unit::TestCase
   # @author Agnieszka
   # wys<lanie pliku na server powinno zakonczyc sie powodzeniem
   def test_should_send_file
-     result = system( "curl --form \"file=@./test_case/hello_world.rb\" http://localhost:8080" );
+     result = system( "curl --form \"file=@./test_case/hello_world.rb\" http://localhost:9798" );
      assert_equal(true, result)
   end
  
