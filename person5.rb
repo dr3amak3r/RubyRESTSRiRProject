@@ -10,7 +10,7 @@ def safetyCheck(dir)
 
 
   temp_file = File.new("temporary.rb", "w")
-  to_check = IO.read(file_to_check)
+  to_check = IO.read(dir)
 
   open('temporary.rb', 'w') {
       |f| f << '$SAFE = 3; '<< to_check
