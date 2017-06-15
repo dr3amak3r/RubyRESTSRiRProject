@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: TestRunAndGetResultFunction
+  
+    &mdash; Documentation by YARD 0.8.7.6
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "TestRunAndGetResultFunction";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (T)</a> &raquo;
+    
+    
+    <span class="title">TestRunAndGetResultFunction</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <iframe id="search_frame" src="class_list.html"></iframe>
+
+      <div id="content"><h1>Class: TestRunAndGetResultFunction
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Test::Unit::TestCase</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Test::Unit::TestCase</li>
+          
+            <li class="next">TestRunAndGetResultFunction</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>test_person3.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>test funkcji do uruchamiania kodu</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Author:</p>
+<ul class="author">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>Marcin</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_should_return_the_same_error-instance_method" title="#test_should_return_the_same_error (instance method)">#<strong>test_should_return_the_same_error</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Kod z błedem powinien zwrócić ten sam błąd.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_should_run_file-instance_method" title="#test_should_run_file (instance method)">#<strong>test_should_run_file</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Poprawny kod hello world powinien sie uruchomić poprawnie.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="test_should_return_the_same_error-instance_method">
+  
+    #<strong>test_should_return_the_same_error</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Kod z błedem powinien zwrócić ten sam błąd</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test_person3.rb', line 27</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_should_return_the_same_error'>test_should_return_the_same_error</span>
+<span class='id identifier rubyid_dir'>dir</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>./output/linker_error.rbc</span><span class='tstring_end'>&quot;</span></span>
+   <span class='id identifier rubyid_filename'>filename</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>linker_error.rbc</span><span class='tstring_end'>&quot;</span></span>
+
+   <span class='const'>String</span> <span class='id identifier rubyid_str'>str</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>                       main # Rubinius::Loader at core/loader.rb:860
+                     evals # Rubinius::Loader at core/loader.rb:646
+                      eval # Kernel(Rubinius::Loader) at core/kernel.rb:1132
+          call_on_instance # Rubinius::BlockEnvironment at core/block_environment.rb:147
+         { } in __script__ # Object at -e:1
+          require_compiled . Rubinius::CodeLoader at core/code_loader.rb:586
+          require_compiled # Rubinius::CodeLoader at core/code_loader.rb:476
+                __script__ # Object at output/linker_error.rbc:1
+  putsxxx (method_missing) # Kernel(Object) at core/zed.rb:1413
+
+private method `putsxxx&#39; called on an instance of Object. (NoMethodError)
+
+An exception occurred evaluating command line code\n</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_should_run_file-instance_method">
+  
+    #<strong>test_should_run_file</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Poprawny kod hello world powinien sie uruchomić poprawnie</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test_person3.rb', line 15</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_should_run_file'>test_should_run_file</span>
+  
+  <span class='id identifier rubyid_dir'>dir</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>./output/hello_world.rbc</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_filename'>filename</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hello_world..rbc</span><span class='tstring_end'>&quot;</span></span>
+  
+  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_run_and_get_result'>run_and_get_result</span><span class='lparen'>(</span> <span class='id identifier rubyid_dir'>dir</span> <span class='comma'>,</span> <span class='id identifier rubyid_filename'>filename</span> <span class='rparen'>)</span>
+ <span class='const'>String</span> <span class='id identifier rubyid_str'>str</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello world\n</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='rparen'>)</span>
+  
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 (ruby-2.3.1).
+</div>
+
+    </div>
+  </body>
+</html>
