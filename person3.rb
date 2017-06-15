@@ -1,14 +1,16 @@
 #!/usr/bin/env  ruby
 
 # @author Marcin
-# @param dir: sciezka do pliku
-# @param filename: nazwa pliku
-# @return string : 
 #
-# funkcja uruchamia i wykonuje skompilowany kod za pomoca rubinius
-# wynik zostanie zapisany w folderze ./output/#{outname}.out oraz 
-# zwrocony przez funkcje
+# Funkcja uruchamia i wykonuje skompilowany kod 
 #
+# Funkcja uruchamia i wykonuje skompilowany kod za pomocą rubinius
+# Wynik zostanie zapisany w folderze ./output/#{outname}.out oraz 
+# zwrócony przez funkcje
+#
+# @param dir[String] scieżka do pliku
+# @param filename [String] nazwa pliku
+# @return [String] wynik wykonanego programu  
 def run_and_get_result(dir,fileName)
   puts "#{dir} - uruchomienie pliku..."
   outname = fileName.split(".")[0];
