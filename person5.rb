@@ -1,11 +1,13 @@
 #!/usr/bin/env  ruby
 
 # @author Michał
+#
 #Funkcja sprawdza poziom bezpieczeństwa kodu
+#Ustawiając poziom bezpieczeństwa $SAFE=3, modyfikując kopię otrzymanego kodu
 #Jeżeli w kodzie występują potencjalnie niebezpieczne metody zwróci 'false'
 #
 # @param dir[String] - sciezka do pliku
-
+#
 def safetyCheck(dir)
 
 
