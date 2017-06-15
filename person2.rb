@@ -1,7 +1,7 @@
 #!/usr/bin/env  ruby
 
 # author Agnieszka
-
+#
 # sprawdza poprawnosc skladni przeslanego pliku. Jesli wystapil blad to zwraca false
 # i zostaje on zapisany w katalogu ./error/{filename}.txt, w przeciwnym razie program 
 # probuje skompilowac plik za pomoca rubinius. Jesli kompilacja sie powiedzie
