@@ -11,9 +11,11 @@
 def safetyCheck(dir)
 
 
+  #stworzenie tymczasowego pliku
   temp_file = File.new("temporary.rb", "w")
   to_check = IO.read(dir)
 
+  #modifikacja kodu poprzez ustawienie 3 poziomu bezpieczeństwa
   open('temporary.rb', 'w') {
       |f| f << '$SAFE = 3; '<< to_check
   }
