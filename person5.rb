@@ -23,15 +23,17 @@ def safetyCheck(dir)
 
 #Wywołanie zmodyfikowanego pliku z kodem
   begin
-    eval(IO.read(temp_file))
-
+    isSecure = system("ruby temporary.rb")
   rescue Exception => e
     return false
   ensure
     temp_file.close
+    File.delete("temporary.rb")
   end
 
-  return true
-end
-
-
+ if isSecure == true
+    return true
+  else
+    return false
+  end
+  end
